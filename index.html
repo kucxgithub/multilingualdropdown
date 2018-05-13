@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components: Multilingual Dropdown</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/multilingualdropdown.js"></script>
+	<style>
+	.icon-flag {
+		max-width: 45px;
+		max-height: 30px;
+	}
+	</style>
+</head>
+
+<body>
+<div class="dropdown">
+
+	<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" id="language-main"></button>
+    <div class="dropdown-menu" role="menu" id="language-items">
+	</div>
+</div>
+
+	<script>
+		
+		var language_items; // an array of language you'd like to include
+		
+		/**
+		
+		Language(country, language, img, link)
+		
+		Parameters:
+		-	country: Country's 3-Letter Code (String)
+		-	language: Language Name (String)
+		-	img: file location of the image (String)
+		-	link: the URL or link you'd like to re-direct the user to (String)
+		
+		**/
+		language_items = [ 
+			new Language("BRA", "Português", "assets/img/brazil.png", "#"),
+			new Language("CAN","English", "assets/img/canada.png", "#"),
+			new Language("CAN","Français", "assets/img/canada.png", "#"),
+			new Language("CHN","中文", "assets/img/china.png", "#"),
+			new Language("EGY","عربى", "assets/img/egypt.png", "#"),
+			new Language("DEU","Deutsche", "assets/img/germany.png", "#"),
+			new Language("IND","हिंदी", "assets/img/india.png", "#"),
+			new Language("ISR","עִברִית", "assets/img/israel.png", "#"),
+			new Language("ISR","عربى", "assets/img/israel.png", "#"),
+			new Language("ITA","italiano", "assets/img/italy.png", "#"),
+			new Language("JPN","日本語", "assets/img/japan.png", "#"),
+			new Language("KOR","한국어", "assets/img/korea.png", "#"),
+			new Language("LBN","عربى", "assets/img/lebanon.png", "#"),
+			new Language("PHL","Filipino", "assets/img/philippines.png", "#"),
+			new Language("ESP","Español", "assets/img/spain.png", "#"),
+			new Language("THA","ไทย", "assets/img/thailand.png", "#"),
+			new Language("USA","English", "assets/img/usa.png", "#")
+		];
+		
+		printLanguageToDisplay(language_items);
+		printLanguageList(language_items);
+		
+		
+	</script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
