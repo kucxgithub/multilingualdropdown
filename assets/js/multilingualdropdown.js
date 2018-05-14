@@ -40,7 +40,7 @@ function Language(country, language, img, link) {
 function printLanguageList(language_items) {
 	var language_list_parent = document.getElementById("language-items");
 	var language_list = "";
-	for (i = 0; i < language_items.length - 1; i++) {
+	for (i = 0; i < language_items.length; i++) {
 		language_list = language_list + "<a class=\"dropdown-item\" role=\"presentation\" href=\"" + language_items[i].link + "\">";
 		language_list = language_list + "<img src=\"" + language_items[i].img + "\" class=\"icon-flag mr-2 img-fluid\" alt=\"Language Item\"/>"
 		language_list = language_list + language_items[i].country + " - " +  language_items[i].language;
